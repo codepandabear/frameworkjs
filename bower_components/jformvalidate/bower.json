@@ -1,0 +1,25 @@
+{
+  "name": "jformValidate",
+  "version": "1.1.0",
+  "main": "dist/jform.validate.css",
+  "authors": [
+    "Christian Fortes <giovanirushl@gmail.com>"
+  ],
+  "description": "Simples módulo para validações em formulários",
+  "keywords": [
+    "validate",
+    "jqueryform",
+    "jformValidate",
+    "form",
+    "javascript"
+  ],
+  "license": "MIT",
+  "homepage": "christianfortes.github.io/jformvalidate",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

@@ -1,0 +1,29 @@
+/* Estilo do arquivo de demonstração */
+body{
+	font-family: 'Arial', 'Verdana';
+}
+
+label{
+	margin-bottom: 10px;
+}
+
+label, span{
+	display: block;
+}
+
+.menu{
+	background: #F1F1F1;
+	display: block;
+	padding: 0 10px;
+	margin: 0;
+}
+
+.menu li{
+	display: inline-block;
+}
+.menu li a{
+	padding: 10px;
+	color: #000;
+	display: inline-block;
+	text-decoration: none;
+}

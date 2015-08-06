@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jFormValidate / Steps / JS</title>
+	<link rel="stylesheet" href="css/demo.css">
+	<link rel="stylesheet" href="../dist/jform.validate.css">
+	
+	<style>
+		[data-jform-step]{
+			display: none;
+		}
+
+		[data-jform-step].active{
+			display: block;
+		}
+	</style>
+</head>
+<body>
+
+<ul class="menu">
+	<li><strong>Menu:</strong></li>
+	<li><a href="index.html">Formulário normal</a></li>
+	<li><a href="steps.html">Formulário em steps</a></li>
+</ul>
+
+<form action="#" method="GET">
+	
+	<h1>Formulário em steps</h1>
+
+	<div data-jform-step="01">
+		<h4>Primeiro passo</h4>
+		<label>
+			<span>Email:</span>
+			<input type="text" data-jform="email" data-jform-message="Digite um email válido">
+		</label>
+
+		<label>
+			<span>CNPJ:</span>
+			<input type="text" data-jform="cnpj" data-jform-message="Digite um cnpj válido">
+		</label>
+
+		<button data-jform-step-next="02">Próximo</button>								
+	</div>
+
+
+	<div data-jform-step="02">
+		<h4>Segundo passo</h4>
+		<label>
+			<span>CPF:</span>
+			<input type="text" data-jform="cpf" data-jform-message="Digite um cpf válido">
+		</label>
+		
+		<label>
+			<span>Minímo de caracteres:</span>
+			<input type="text" data-jform="minlength" data-jform-option="5" data-jform-message="Você deve digitar pelo menos 5 caracteres">
+		</label>
+
+		<button data-jform-step-prev>Anterior</button>
+		<button data-jform-step-next="03">Próximo</button>	
+	</div>
+
+
+	<div data-jform-step="03">
+		<h4>Terceiro passo</h4>
+		
+		<label>
+			<span>Letras:</span>
+			<input type="text" data-jform="letters" data-jform-message="Este campo só permite letras">
+		</label>
+
+		<label>
+			<span>Números:</span>
+			<input type="text" data-jform="number" data-jform-message="Este campo só permite números">
+		</label>
+		
+		<button data-jform-step-prev>Anterior</button>
+		<button type="submit" data-jform-submit="true">Finalizar</button>				
+	</div>
+</form>
+
+<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="../dist/jform.validate-1.1.0.min.js"></script>
+<script> jformApp.init(); </script>
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jFormValidate / Form / JS</title>
+	<link rel="stylesheet" href="css/demo.css">
+	<link rel="stylesheet" href="../dist/jform.validate.css">
+</head>
+<body>
+
+<ul class="menu">
+	<li><strong>Menu:</strong></li>
+	<li><a href="index.html">Formulário normal</a></li>
+	<li><a href="steps.html">Formulário em steps</a></li>
+</ul>
+
+<form action="#" method="GET">
+	
+	<h1>Formulário normal</h1>
+
+	<label>
+		<span>CEP:</span>
+		<input type="text" data-jform="cep" data-jform-message="Digite um cep válido">
+	</label>
+
+	<label>
+		<span>Letras:</span>
+		<input type="text" data-jform="letters" data-jform-message="Este campo só permite letras">
+	</label>
+
+	<label>
+		<span>Números:</span>
+		<input type="text" data-jform="number" data-jform-message="Este campo só permite números">
+	</label>
+
+	<label>
+		<span>Upload:</span>
+		<input type="file" data-jform="extension" data-jform-option="xls|csv" data-jform-message="Adicione um tipo de arquivo válido">
+	</label>
+
+	<label>
+		<span>Url:</span>
+		<input type="text" data-jform="url" data-jform-message="Digite uma url válido">
+	</label>
+
+	<label>
+		<select data-jform>
+			<option value="">Selecione</option>
+			<option value="test">teste</option>
+		</select>
+	</label>
+	
+	<br>
+
+	<div data-jform="radio">
+		<label>
+			<input type="radio" name="text" value="0">
+			Valor 01
+		</label>
+
+		<label>
+			<input type="radio" name="text" value="1">
+			Valor 02
+		</label>
+
+		<label>
+			<input type="radio" name="text" value="2">
+			Valor 03
+		</label>
+
+		<label>
+			<input type="radio" name="text" value="3">
+			Valor 04
+		</label>
+	</div>
+
+	<br>
+
+	<div data-jform="checkbox" data-jform-option="2">
+		<input type="checkbox" name="vehicle" value="0">Bicicleta<br>
+		<input type="checkbox" name="vehicle" value="1">Carro<br>
+		<input type="checkbox" name="vehicle" value="2">Avião<br>
+		<input type="checkbox" name="vehicle" value="3">Barco<br>
+		<input type="checkbox" name="vehicle" value="4">Canoa<br>
+		<input type="checkbox" name="vehicle" value="5">Cavalo	
+	</div>
+	
+	<br>
+
+	<label>
+		<span>Email:</span>
+		<input type="text" data-jform="email" data-jform-message="Digite um email válido">
+	</label>
+
+	<label>
+		<span>CNPJ:</span>
+		<input type="text" data-jform="cnpj" data-jform-message="Digite um cnpj válido">
+	</label>
+
+	<label>
+		<span>CPF:</span>
+		<input type="text" data-jform="cpf" data-jform-message="Digite um cpf válido">
+	</label>
+
+	<label>
+		<span>Minímo de caracteres:</span>
+		<input type="text" data-jform="minlength" data-jform-option="5" data-jform-message="Você deve digitar pelo menos 5 caracteres">
+	</label>
+
+	<label>
+		<span>Required:</span>
+		<input type="text" data-jform>
+	</label>
+
+	<label>
+		<span>Novos métodos:</span>
+		<input type="text" data-jform="addmethod" data-jform-method="myFunction" data-jform-message="Mensagem personalizada">
+	</label>
+
+	<button type="submit" data-jform-submit="true">Validar</button>
+</form>
+
+<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="../dist/jform.validate-1.1.0.min.js"></script>
+<script type="text/javascript" src="../dist/jform.additional.js"></script>
+<script> jformApp.init(); </script>
+</body>
+</html>

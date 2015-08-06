@@ -1,0 +1,14 @@
+/* Class error reporting elements */
+
+.jform-msg-error,
+.jform-elem-error{
+	display: block;
+}
+
+.jform-msg-error{
+	color: #FF0000;
+}
+
+.jform-elem-error{
+	border: 1px solid #FF0000;
+}
